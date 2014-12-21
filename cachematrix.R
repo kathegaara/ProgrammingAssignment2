@@ -21,17 +21,20 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The following function calculates the inverse of the special "marirx"
+## created with the makeCacheMatrix. It first checks to see if the
+## mean has already been calculated. If so, it get`s the inverse from the
+## cache and skips the computation. Otherwise, it calculates the inverse
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-		inv <- x$getinv()
+		inv <- x$getinv() ##checking for the existence of inverse
             if(!is.null(inv)) {
                     message("getting cached data")
-                    return(inv)
+                    return(inv) ## returning the cached inverse
             }
-            data <- x$get()
-            inv <- solve(data)
+            data <- x$get() 
+            inv <- solve(data) ## calculating the inverse
             x$setinv(inv)
             inv
 }
