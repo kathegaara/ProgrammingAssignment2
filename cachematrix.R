@@ -1,6 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ## makeCacheMatrix is a function that creates a list of functions on a special matirx to
 ## set the value of the matrixx
 ## get the value of the matrix
@@ -38,6 +35,3 @@ cacheSolve <- function(x, ...) {
             x$setinv(inv)
             inv
 }
-
-
-https://github.com/kathegaara/ProgrammingAssignment2.git
